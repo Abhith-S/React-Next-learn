@@ -1,2 +1,2 @@
-# React-learn
-Sample react codes
+# React-Next-learn
+Sample react and next.js codes
