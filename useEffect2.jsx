@@ -1,5 +1,10 @@
 //when you're searching for a person's name on Facebook, how does Facebook fetch and display recommendations every time you add/remove a character
 //useEffect to rerun the function everytime the state variable changes
+//You can also similarly create side effects which are dependent on multiple state variables, not just one. 
+//If any of the dependent variables change, the side effect is run. You do this by just adding more state variables to the dependency array.
+//eg) useEffect(() => {
+        // Some code
+//    }, [stateVar1, stateVar2, stateVar3, andSoOn]);
 
 import { useEffect, useState } from "react";
 
@@ -16,6 +21,7 @@ export default function App(){
   const [recommendation, setRecommendation] = useState([])
 
   //run the function if change in searchText detected
+  //here multiple values can be passed in the array and if any one of them changes the function will execute again
   useEffect( ()=>{
 
     // If user is not searching for anything, don't show any recomendations
